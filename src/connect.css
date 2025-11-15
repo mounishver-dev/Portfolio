@@ -1,0 +1,115 @@
+.connect-section {
+  padding: 48px 36px;
+  color: #fff;
+  font-family: "Momo Trust Display", sans-serif;
+}
+
+.connect-card {
+  max-width: 880px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 20px;
+  padding: 32px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.connect-title {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+.connect-sub {
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+
+.connect-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-row strong {
+  font-size: 13px;
+  opacity: 0.9;
+}
+
+.info-row a {
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.info-row a:hover {
+  text-decoration: underline;
+}
+
+.social-row {
+  display: flex;
+  gap: 12px;
+}
+
+.social-btn {
+  padding: 10px 16px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.2s ease;
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #fff;
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.btn-primary {
+  padding: 12px 16px;
+  background: #fff;
+  color: #000;
+  font-weight: 700;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.form-status {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+@media (max-width: 860px) {
+  .connect-grid {
+    grid-template-columns: 1fr;
+  }
+}
