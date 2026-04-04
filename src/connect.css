@@ -1,5 +1,5 @@
 .connect-section {
-  padding: 48px 36px;
+  padding: clamp(28px, 6vw, 48px) clamp(16px, 4vw, 36px);
   color: #fff;
   font-family: "Momo Trust Display", sans-serif;
 }
@@ -9,26 +9,28 @@
   margin: auto;
   background: rgba(255, 255, 255, 0.04);
   border-radius: 20px;
-  padding: 32px;
+  padding: clamp(20px, 4vw, 32px);
   backdrop-filter: blur(6px);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .connect-title {
-  font-size: 42px;
-  margin-bottom: 10px;
+  font-size: clamp(28px, 6vw, 42px);
+  margin: 0 0 10px 0;
   font-weight: 800;
 }
 
 .connect-sub {
   opacity: 0.85;
   margin-bottom: 24px;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  line-height: 1.6;
 }
 
 .connect-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 32px;
+  gap: clamp(20px, 4vw, 32px);
 }
 
 .contact-info {
@@ -40,12 +42,15 @@
 .info-row strong {
   font-size: 13px;
   opacity: 0.9;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .info-row a {
   color: #fff;
   font-weight: 600;
   text-decoration: none;
+  word-break: break-all;        /* long emails won't overflow on mobile */
 }
 
 .info-row a:hover {
@@ -55,6 +60,7 @@
 .social-row {
   display: flex;
   gap: 12px;
+  flex-wrap: wrap;
 }
 
 .social-btn {
@@ -86,6 +92,9 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   color: #fff;
   outline: none;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;       /* stops inputs from overflowing */
 }
 
 .contact-form input::placeholder,
@@ -101,14 +110,22 @@
   border-radius: 12px;
   border: none;
   cursor: pointer;
+  font-size: 1rem;
+  transition: opacity 0.2s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.88;
 }
 
 .form-status {
   margin-top: 8px;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
-@media (max-width: 860px) {
+/* ── Responsive ── */
+@media (max-width: 640px) {
   .connect-grid {
     grid-template-columns: 1fr;
   }
